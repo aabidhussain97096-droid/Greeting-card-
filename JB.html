@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Farewell Card - SITAMARHI CENTRAL SCHOOL</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      background: linear-gradient(135deg, #f093fb, #f5576c);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Bubble animation background */
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: float 10s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0.5); }
+      50% { transform: translateY(50vh) scale(1); }
+      100% { transform: translateY(-10vh) scale(0.5); }
+    }
+
+    /* First page */
+    #page1 {
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      z-index: 1;
+      transition: transform 1s ease, opacity 1s ease;
+    }
+
+    #page1.hidden {
+      transform: scale(0.8);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #page1 h1 {
+      font-size: 3rem;
+      color: #fff;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    #page1 h2 {
+      font-size: 2rem;
+      color: #ffd700;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    #nextBtn {
+      padding: 15px 40px;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      color: #fff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    #nextBtn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    /* Second page */
+    #page2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #36d1dc, #5b86e5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 50px;
+      color: #fff;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1s ease;
+      overflow-y: auto;
+    }
+
+    #page2.visible {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    #page2 h1 {
+      font-size: 3rem;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    #page2 p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      max-width: 800px;
+      text-align: justify;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Bubbles -->
+  <div class="bubble" style="width:50px;height:50px;left:10%;animation-duration:12s;"></div>
+  <div class="bubble" style="width:30px;height:30px;left:30%;animation-duration:8s;"></div>
+  <div class="bubble" style="width:40px;height:40px;left:50%;animation-duration:10s;"></div>
+  <div class="bubble" style="width:60px;height:60px;left:70%;animation-duration:14s;"></div>
+  <div class="bubble" style="width:35px;height:35px;left:90%;animation-duration:9s;"></div>
+
+  <!-- First Page -->
+  <div id="page1">
+    <h1>SITAMARHI CENTRAL SCHOOL</h1>
+    <h2>FAREWELL</h2>
+    <button id="nextBtn">Click to Open Card</button>
+  </div>
+
+  <!-- Second Page -->
+  <div id="page2">
+    <h1>FAREWELL OF CLASS 10TH</h1>
+    <p>
+      Pyare Class 10th ke students,<br><br>
+
+Aaj ka din sirf alvida kehne ka nahi hai, balki un saari yaadon ko yaad karne ka din hai
+jo humne is school ke saath bitaye. Jab aap pehli baar
+SITAMARHI CENTRAL SCHOOL ke gate se aaye, tab shayad aapko andaza bhi nahi tha
+ki yeh jagah aapki zindagi ka itna khoobsurat hissa ban jaayegi.<br><br>
+
+Har subah ki assembly, har class ka shor, teachers ki guidance,
+friends ke saath hasi-mazaak, exam ka pressure aur success ki khushi –
+yeh sab aapko woh banata gaya jo aaj aap ho.<br><br>
+
+Zindagi ke aage ke raaste aasaan nahi honge.
+Kabhi challenges ka saamna hoga, kabhi khud par shaq hoga,
+lekin hamesha yaad rakho – aap strong ho,
+aap capable ho aur aap kuch bhi achieve kar sakte ho.<br><br>
+
+Apne maa-baap, teachers aur school ke sanskaar hamesha apne saath rakho.
+Mehnat aur honesty se kabhi peeche mat hatna.
+Jo sanskaar aur values is school ne diye, unhe kabhi mat bhoolna.<br><br>
+
+Aaj hum aapko alvida keh rahe hain,
+lekin dil se dua karte hain ki aap jahan bhi jao,
+wahan roshni failao, apna aur apne school ka naam roshan karo.<br><br>
+
+Teachers aapko hamesha yaad rakhenge,
+juniors aapko inspiration ke liye dekhenge,
+aur SITAMARHI CENTRAL SCHOOL hamesha aapke liye khula rahega.<br><br>
+
+Go forward with confidence, chase your dreams fearlessly,
+aur har stage par apni mehnat aur pyaar se jeet pao.<br><br>
+    </p>
+  </div>
+
+  <script>
+    const nextBtn = document.getElementById('nextBtn');
+    const page1 = document.getElementById('page1');
+    const page2 = document.getElementById('page2');
+
+    nextBtn.addEventListener('click', () => {
+      page1.classList.add('hidden');
+      setTimeout(() => {
+        page2.classList.add('visible');
+      }, 800); // delay to match transition
+    });
+  </script>
+
+</body>
+</html>
